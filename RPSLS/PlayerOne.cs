@@ -22,7 +22,7 @@ namespace RPSLS
         
     
         //constructor
-        PlayerOne()
+        public PlayerOne()
         {
 
         }
