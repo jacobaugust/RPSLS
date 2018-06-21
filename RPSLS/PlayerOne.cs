@@ -6,7 +6,44 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class PlayerOne
+    public class PlayerOne
     {
+        //member variables
+        public string playerOneName;
+        public string playerOneScissors;
+        public string playerOnePaper;
+        public string playerOneRock;
+        public string playerOneLizard;
+        public string playerOneSpock;
+        public string playerOneRoundOneSelection;
+        public string playerOneRoundTwoSelection;
+        public string playerOneRoundThreeSelection;
+        
+
+        //constructor
+        public PlayerOne()
+        {
+
+        }
+
+        //member methods
+        void RoundOneSelector()
+        {
+            Console.WriteLine("Welcome to the Single Player Game!\n\nPick from the gesture options below and see if you can beat the computer!\n\n\n Enter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter5 for Spock.");
+            string PlayerRoundOneSelection = Console.ReadLine();
+        }
+        void RoundTwoSelector()
+        {
+            Console.WriteLine("Round Two!\n\nPick from the gesture options below and see if you can beat the computer!\n\n\n Enter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter5 for Spock.");
+            string PlayerRoundOneSelection = Console.ReadLine();
+        }
+        void RoundThreeSelector()
+        {
+            Console.WriteLine("Round Three!\n\nPick from the gesture options below and see if you can beat the computer!\n\n\n Enter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter5 for Spock.");
+            string PlayerRoundOneSelection = Console.ReadLine();
+        }
+        
+
+
     }
 }
