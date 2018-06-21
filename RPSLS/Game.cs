@@ -15,6 +15,11 @@ namespace RPSLS
         public PlayerOne playerOne;
         public PlayerTwo playerTwo;
         public ComputerPlayer computerPlayer;
+        public string roundOutcome;
+        public string gameOutcome;
+        public List<string> playerOneSelections;
+        public List<string> playerTwoSelections;
+        public List<string> computerPlayerSelections;
 
 
     
@@ -66,7 +71,10 @@ namespace RPSLS
             computerPlayer = new ComputerPlayer();
             computerPlayer.RoundOneSelector();
             //round outcome below
+            playerOneSelections = playerOne.SelectionList();
+            computerPlayerSelections = computerPlayer.SelectionList();
 
+            
             SinglePlayerRoundTwo();
 
         }

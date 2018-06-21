@@ -31,12 +31,12 @@ namespace RPSLS
         }
         public void RoundTwoSelector()
         {
-            Console.WriteLine("Round Two!\n\nPick from the gesture options below!\n\n\n Enter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter5 for Spock.");
+            Console.WriteLine("Round Two!\n\nPick from the gesture options below!\n\n\n Enter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter 5 for Spock.");
             playerTwoRoundTwoSelection = Console.ReadLine();
         }
         public void RoundThreeSelector()
         {
-            Console.WriteLine("Round Three!\n\nPick from the gesture options below!\n\n\n Enter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter5 for Spock.");
+            Console.WriteLine("Round Three!\n\nPick from the gesture options below!\n\n\n Enter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter 5 for Spock.");
             playerTwoRoundTwoSelection = Console.ReadLine();
         }
         public List<string> SelectionList()
