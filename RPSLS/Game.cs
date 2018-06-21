@@ -65,16 +65,29 @@ namespace RPSLS
         {
             playerOne = new PlayerOne();
             playerOne.RoundOneSelector();
+            computerPlayer = new ComputerPlayer();
             computerPlayer.RoundOneSelector();
+            //round outcome below
+
+            SinglePlayerRoundTwo();
 
         }
         public void SinglePlayerRoundTwo()
         {
             playerOne.RoundTwoSelector();
+            computerPlayer.RoundOneSelector();
+            //round outcome below 
+
+            //send to round three or game result message
         }
         public void SinglePlayerRoundThree()
         {
             playerOne.RoundThreeSelector();
+            computerPlayer.RoundOneSelector();
+            //round outcome below 
+
+            //game result message
+            GameIntroduction();
         }
         //Head to Head Game
         public void HeadToHeadRoundOne()
@@ -83,17 +96,25 @@ namespace RPSLS
             playerOne.RoundOneSelector();
             playerTwo = new PlayerTwo();
             playerTwo.RoundOneSelector();
+            //round outcome below
+
+            HeadToHeadRoundTwo();
             
         }
         public void HeadToHeadRoundTwo()
         {
             playerOne.RoundOneSelector();
             playerTwo.RoundTwoSelector();
+            //round outcome below
+
+            //send to round three or game result
         }
         public void HeadToHeadRoundThree()
         {
             playerOne.RoundThreeSelector();
             playerTwo.RoundThreeSelector();
+            //game result
+            GameIntroduction();
         }
     }
 }
