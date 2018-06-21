@@ -20,6 +20,28 @@ namespace RPSLS
         //constructor
 
         //member methods
+        public void RoundOneSelector()
+        {
+            Random rnd = new Random();
+            int numberSelectionOne = rnd.Next(1, 7);
+            computerPlayerRoundOneSelection = numberSelectionOne.ToString();
+            Console.ReadLine
+        }
+        public void RoundTwoSelector()
+        {
+
+        }
+        public void RoundThreeSelector()
+        {
+
+        }
+        public List<string> SelectionList()
+        {
+            List<string> selections = new List<string>() { ComputerRoundOneSelection, ComputerTwoRoundTwoSelection, ComputerTwoRoundThreeSelection };
+            return selections;
+        }
+
+        
 
     }
 }

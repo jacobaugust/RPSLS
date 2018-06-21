@@ -12,8 +12,6 @@ namespace RPSLS
         public string gameTypeSelection;
         public string playerOneName;
         public string playerTwoName;
-        public string playerOneSelection;
-        public string playerTwoSelection;
         public PlayerOne playerOne;
         public PlayerTwo playerTwo;
         public ComputerPlayer computerPlayer;
@@ -75,7 +73,7 @@ namespace RPSLS
         public void SinglePlayerRoundTwo()
         {
             playerOne.RoundTwoSelector();
-            computerPlayer.RoundOneSelector();
+            computerPlayer.RoundTwoSelector();
             //round outcome below 
 
             //send to round three or game result message
@@ -83,7 +81,7 @@ namespace RPSLS
         public void SinglePlayerRoundThree()
         {
             playerOne.RoundThreeSelector();
-            computerPlayer.RoundOneSelector();
+            computerPlayer.RoundTwoSelector();
             //round outcome below 
 
             //game result message

@@ -24,5 +24,26 @@ namespace RPSLS
 
         }
         //member methods
+        public void RoundOneSelector()
+        {
+            Console.WriteLine("Welcome to Round One!\n\n Pick from the gesture options below.\n\n\n Enter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter5 for Spock.");
+            playerTwoRoundOneSelection = Console.ReadLine();
+        }
+        public void RoundTwoSelector()
+        {
+            Console.WriteLine("Round Two!\n\nPick from the gesture options below!\n\n\n Enter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter5 for Spock.");
+            playerTwoRoundTwoSelection = Console.ReadLine();
+        }
+        public void RoundThreeSelector()
+        {
+            Console.WriteLine("Round Three!\n\nPick from the gesture options below!\n\n\n Enter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter5 for Spock.");
+            playerTwoRoundTwoSelection = Console.ReadLine();
+        }
+        public List<string> SelectionList()
+        {
+            List<string> selections = new List<string>() {playerTwoRoundOneSelection, playerTwoRoundTwoSelection, playerTwoRoundThreeSelection};
+            return selections;
+        }
+
     }
 }
