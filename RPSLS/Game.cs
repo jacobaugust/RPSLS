@@ -330,6 +330,8 @@ namespace RockPaperScissorsLizardSpock
             void HeadtoHeadResultCheck()
             {
                 player.RoundSelector();
+                Console.Clear();
+                Console.WriteLine("Pass to next player.");
                 switch (player.humanSelection)
                 {
                     case "1":
