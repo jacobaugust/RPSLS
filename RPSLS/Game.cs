@@ -121,7 +121,7 @@ namespace RockPaperScissorsLizardSpock
                     CheckSpock();
                     break;
                 default:
-                    Console.WriteLine("Please enter a 1, 2, 3, 4, or 5 to make your selection.");
+                    Console.WriteLine("\n\nPlease enter a 1, 2, 3, 4, or 5 to make your selection.");
                     player.RoundSelector();
                     break;
 
@@ -374,7 +374,7 @@ namespace RockPaperScissorsLizardSpock
                         CheckSpock();
                         break;
                     default:
-                        Console.WriteLine("Please enter a 1, 2, 3, 4, or 5 to make your selection.");
+                        Console.WriteLine("\n\nPlease enter a 1, 2, 3, 4, or 5 to make your selection.");
                         player.RoundSelector();
                         break;
 
