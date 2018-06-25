@@ -38,7 +38,7 @@ namespace RockPaperScissorsLizardSpock
         //member methods(actions)
         public void GameIntroduction()
         {
-            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, and Spock.\n\nA modern twist on the classic rock, paper, and scissors game.\n\nThe rules are as follows:\n\n You will play a best out of three match against either a computer or another player.\n\nBelow are the options and their potential outcomes:\n\nRock crushes Scissors\nScissors cut Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock");
+            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, and Spock.\n\nA modern twist on the classic rock, paper, and scissors game.\n\nThe rules are as follows:\n\n You will play a best out of three match against either a computer or another player.\n\nBelow are the options and their potential outcomes:\n\nRock crushes Scissors\nScissors cut Paper\nPaper covers Rock\nRock crushes Lizard\nLizard poisons Spock\nSpock smashes Scissors\nScissors decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock\n\nHit Enter to begin.");
             Console.ReadLine();
 
         }
@@ -139,25 +139,30 @@ namespace RockPaperScissorsLizardSpock
             {
                 case "1":
                     Console.WriteLine("Computer also selected rock... try again.");
+                    SinglePlayerGame();
                     break;
                 case "2":
                     Console.WriteLine("You lost the round.");
                     roundResult--;
+                    SinglePlayerGame();
                     break;
                 case "3":
                     Console.WriteLine("You won the round.");
                     roundResult++;
+                    SinglePlayerGame();
                     break;
                 case "4":
                     Console.WriteLine("You won the round.");
                     roundResult++;
+                    SinglePlayerGame();
                     break;
                 case "5":
                     Console.WriteLine("You lost the round.");
                     roundResult++;
+                    SinglePlayerGame();
                     break;
                 default:
-                    GameMenu();
+                    GameIntroduction();
                     break;
 
             }
@@ -219,7 +224,7 @@ namespace RockPaperScissorsLizardSpock
                     roundResult--;
                     break;
                 default:
-                    GameMenu();
+                    GameIntroduction();
                     break;
 
             }
@@ -365,22 +370,27 @@ namespace RockPaperScissorsLizardSpock
                 {
                     case "1":
                         Console.WriteLine("Computer also selected rock... try again.");
+                        HeadToHeadGame();
                         break;
                     case "2":
                         Console.WriteLine("Player Two won the round.");
                         roundResult--;
+                        HeadToHeadGame();
                         break;
                     case "3":
                         Console.WriteLine("Player One the round.");
                         roundResult++;
+                        HeadToHeadGame();
                         break;
                     case "4":
                         Console.WriteLine("Player One won the round.");
                         roundResult++;
+                        HeadToHeadGame();
                         break;
                     case "5":
                         Console.WriteLine("Player Two won the round.");
                         roundResult++;
+                        HeadToHeadGame();
                         break;
                     default:
                         GameMenu();
