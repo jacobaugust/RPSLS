@@ -122,7 +122,7 @@ namespace RockPaperScissorsLizardSpock
                     break;
                 default:
                     Console.WriteLine("\n\nPlease enter a 1, 2, 3, 4, or 5 to make your selection.");
-                    player.RoundSelector();
+                    SinglePlayerResultCheck();
                     break;
 
             }
@@ -341,7 +341,7 @@ namespace RockPaperScissorsLizardSpock
                     Console.WriteLine("PLAYER ONE WINS THE GAME!");
                     GameIntroduction();
                 }
-                HeadtoHeadResultCheck();
+                HeadToHeadResultCheck();
             }
 
             //capture selection
@@ -351,7 +351,7 @@ namespace RockPaperScissorsLizardSpock
             //list selection
 
             //check result
-            void HeadtoHeadResultCheck()
+            void HeadToHeadResultCheck()
             {
                 player.RoundSelector();
                 Console.Clear();
@@ -375,7 +375,7 @@ namespace RockPaperScissorsLizardSpock
                         break;
                     default:
                         Console.WriteLine("\n\nPlease enter a 1, 2, 3, 4, or 5 to make your selection.");
-                        player.RoundSelector();
+                        HeadToHeadResultCheck();
                         break;
 
                 }
