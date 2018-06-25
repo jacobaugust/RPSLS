@@ -78,15 +78,15 @@ namespace RockPaperScissorsLizardSpock
                 if (roundResult < 2)
                 {
                     Console.WriteLine("COMPUTER WINS THE GAME!");
-                    GameMenu();
+                    GameIntroduction();
                 }
                 if (roundResult > 4)
                 {
                     Console.WriteLine("PLAYER ONE WINS THE GAME!");
-                    GameMenu();
+                    GameIntroduction();
                 }
 
-                //capture selection
+              
 
 
 
@@ -94,11 +94,7 @@ namespace RockPaperScissorsLizardSpock
 
             }
 
-            //capture selection
-
-            //list selection
-
-            //check result
+          
 
 
 
@@ -125,6 +121,7 @@ namespace RockPaperScissorsLizardSpock
                     CheckSpock();
                     break;
                 default:
+                    Console.WriteLine("Please enter a 1, 2, 3, 4, or 5 to make your selection.");
                     player.RoundSelector();
                     break;
 
@@ -171,29 +168,35 @@ namespace RockPaperScissorsLizardSpock
 
         void CheckPaper()
         {
+            computer.RoundSelector();
             switch (computer.computerSelection)
             {
                 case "1":
                     Console.WriteLine("You won the round.");
                     roundResult++;
+                    SinglePlayerGame();
                     break;
                 case "2":
                     Console.WriteLine("You Tied!... try again.");
+                    SinglePlayerGame();
                     break;
                 case "3":
                     Console.WriteLine("You lost the round.");
+                    SinglePlayerGame();
                     roundResult--;
                     break;
                 case "4":
                     Console.WriteLine("You lost the round.");
                     roundResult--;
+                    SinglePlayerGame();
                     break;
                 case "5":
                     Console.WriteLine("You won the round.");
                     roundResult++;
+                    SinglePlayerGame();
                     break;
                 default:
-                    GameMenu();
+                    GameIntroduction();
                     break;
 
             }
@@ -201,27 +204,32 @@ namespace RockPaperScissorsLizardSpock
 
         void CheckScissors()
         {
+            computer.RoundSelector();
             switch (computer.computerSelection)
             {
                 case "1":
                     Console.WriteLine("You lost the round.");
                     roundResult--;
+                    SinglePlayerGame();
                     break;
                 case "2":
                     Console.WriteLine("You won the round.");
                     roundResult++;
-
+                    SinglePlayerGame();
                     break;
                 case "3":
                     Console.WriteLine("Tie Round... try again.");
+                    SinglePlayerGame();
                     break;
                 case "4":
                     Console.WriteLine("You won the round.");
                     roundResult++;
+                    SinglePlayerGame();
                     break;
                 case "5":
                     Console.WriteLine("You lost the round.");
                     roundResult--;
+                    SinglePlayerGame();
                     break;
                 default:
                     GameIntroduction();
@@ -236,19 +244,23 @@ namespace RockPaperScissorsLizardSpock
 
         void CheckLizard()
         {
+            computer.RoundSelector();
             switch (computer.computerSelection)
             {
                 case "1":
                     Console.WriteLine("You lost the round.");
                     roundResult--;
+                    SinglePlayerGame();
                     break;
                 case "2":
                     Console.WriteLine("You won the round.");
                     roundResult++;
+                    SinglePlayerGame();
                     break;
                 case "3":
                     Console.WriteLine("You lost the round.");
                     roundResult--;
+                    SinglePlayerGame();
                     break;
                 case "4":
                     Console.WriteLine("Tie Round... try again.");
@@ -257,39 +269,46 @@ namespace RockPaperScissorsLizardSpock
                 case "5":
                     Console.WriteLine("You won the round.");
                     roundResult++;
+                    SinglePlayerGame();
                     break;
                 default:
-                    GameMenu();
+                    GameIntroduction();
                     break;
             }
         }
 
         void CheckSpock()
         {
+            computer.RoundSelector();
             switch (computer.computerSelection)
             {
                 case "1":
                     Console.WriteLine("You won the round.");
                     roundResult++;
+                    SinglePlayerGame();
                     break;
                 case "2":
                     Console.WriteLine("You lost the round.");
                     roundResult--;
+                    SinglePlayerGame();
                     break;
                 case "3":
                     Console.WriteLine("You lost the round.");
                     roundResult--;
+                    SinglePlayerGame();
                     break;
                 case "4":
                     Console.WriteLine("You won the round.");
                     roundResult++;
+                    SinglePlayerGame();
                     break;
                 case "5":
                     Console.WriteLine("Tie Round... try again.");
+                    SinglePlayerGame();
 
                     break;
                 default:
-                    GameMenu();
+                    GameIntroduction();
                     break;
             }
 
@@ -315,12 +334,12 @@ namespace RockPaperScissorsLizardSpock
                 if (roundResult < 2)
                 {
                     Console.WriteLine("PLAYER TWO WINS THE GAME!");
-                    GameMenu();
+                    GameIntroduction();
                 }
                 if (roundResult > 4)
                 {
                     Console.WriteLine("PLAYER ONE WINS THE GAME!");
-                    GameMenu();
+                    GameIntroduction();
                 }
                 HeadtoHeadResultCheck();
             }
@@ -355,6 +374,7 @@ namespace RockPaperScissorsLizardSpock
                         CheckSpock();
                         break;
                     default:
+                        Console.WriteLine("Please enter a 1, 2, 3, 4, or 5 to make your selection.");
                         player.RoundSelector();
                         break;
 
@@ -393,6 +413,7 @@ namespace RockPaperScissorsLizardSpock
                         HeadToHeadGame();
                         break;
                     default:
+                        Console.WriteLine("Please enter a 1, 2, 3, 4, or 5 to make your selection.");
                         GameMenu();
                         break;
 
@@ -402,26 +423,32 @@ namespace RockPaperScissorsLizardSpock
 
             void CheckPaper()
             {
+                playerTwo.RoundSelector();
                 switch (playerTwo.humanSelection)
                 {
                     case "1":
                         Console.WriteLine("Player One won the round.");
                         roundResult++;
+                        HeadToHeadGame();
                         break;
                     case "2":
                         Console.WriteLine("You Tied!... try again.");
+                        HeadToHeadGame();
                         break;
                     case "3":
                         Console.WriteLine("Player Two won the round.");
                         roundResult--;
+                        HeadToHeadGame();
                         break;
                     case "4":
                         Console.WriteLine("Player Two won the round.");
                         roundResult--;
+                        HeadToHeadGame();
                         break;
                     case "5":
                         Console.WriteLine("Player One won the round.");
                         roundResult++;
+                        HeadToHeadGame();
                         break;
                     default:
                         GameMenu();
@@ -432,27 +459,32 @@ namespace RockPaperScissorsLizardSpock
 
             void CheckScissors()
             {
+                playerTwo.RoundSelector();
                 switch (playerTwo.humanSelection)
                 {
                     case "1":
                         Console.WriteLine("Player Two won the round.");
                         roundResult--;
+                        HeadToHeadGame();
                         break;
                     case "2":
                         Console.WriteLine("Player One won the round.");
                         roundResult++;
-
+                        HeadToHeadGame();
                         break;
                     case "3":
                         Console.WriteLine("Tie Round... try again.");
+                        HeadToHeadGame();
                         break;
                     case "4":
                         Console.WriteLine("Player One won the round.");
                         roundResult++;
+                        HeadToHeadGame();
                         break;
                     case "5":
                         Console.WriteLine("Player Two won the round.");
                         roundResult--;
+                        HeadToHeadGame();
                         break;
                     default:
                         GameMenu();
@@ -467,27 +499,33 @@ namespace RockPaperScissorsLizardSpock
 
             void CheckLizard()
             {
+                playerTwo.RoundSelector();
                 switch (playerTwo.humanSelection)
                 {
                     case "1":
                         Console.WriteLine("Player Two won the round.");
                         roundResult--;
+                        HeadToHeadGame();
                         break;
                     case "2":
                         Console.WriteLine("Player One won the round.");
                         roundResult++;
+                        HeadToHeadGame();
                         break;
                     case "3":
                         Console.WriteLine("Player Two won the round.");
                         roundResult--;
+                        HeadToHeadGame();
                         break;
                     case "4":
                         Console.WriteLine("Tie Round... try again.");
                         player.RoundSelector();
+                        HeadToHeadGame();
                         break;
                     case "5":
                         Console.WriteLine("Player One won the round.");
                         roundResult++;
+                        HeadToHeadGame();
                         break;
                     default:
                         GameMenu();
@@ -497,26 +535,32 @@ namespace RockPaperScissorsLizardSpock
 
             void CheckSpock()
             {
+                playerTwo.RoundSelector();
                 switch (playerTwo.humanSelection)
                 {
                     case "1":
                         Console.WriteLine("Player One won the round.");
                         roundResult++;
+                        HeadToHeadGame();
                         break;
                     case "2":
                         Console.WriteLine("Player Two won the round.");
                         roundResult--;
+                        HeadToHeadGame();
                         break;
                     case "3":
                         Console.WriteLine("Player Two won the round.");
                         roundResult--;
+                        HeadToHeadGame();
                         break;
                     case "4":
                         Console.WriteLine("Player One won the round.");
                         roundResult++;
+                        HeadToHeadGame();
                         break;
                     case "5":
                         Console.WriteLine("Tie Round... try again.");
+                        HeadToHeadGame();
                         break;
                     default:
                         GameMenu();
@@ -529,9 +573,7 @@ namespace RockPaperScissorsLizardSpock
 
 
     }
-    //display round result
-
-    //display game status
+    
 
 
 }

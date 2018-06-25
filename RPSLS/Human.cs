@@ -26,7 +26,7 @@ namespace RockPaperScissorsLizardSpock
         }
         public override void RoundSelector()
         {
-            Console.WriteLine("Make your selection!\n\nPlayer One will go first and Player Two will go second. Pick from the gesture options below.\n\n\nEnter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter 5 for Spock.");
+            Console.WriteLine("Make your selection!\n\nGame Reminder... If in Head to Head, Player One will always go first and Player Two will go second. Pick from the gesture options below.\n\n\nEnter 1 for ROCK\nEnter 2 for PAPER\nEnter 3 for SCISSORS\nEnter 4 for Lizard\nEnter 5 for Spock.");
             humanSelection = Console.ReadLine();
 
         }
